@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Hola Mundo</title>
-    <script>
-        async function obtenerUbicacion() {
-            try {
-                // Obtén la dirección IP del usuario
-                const respuestaIP = await fetch('https://api.ipify.org?format=json');
-                const datosIP = await respuestaIP.json();
-                const ip = datosIP.ip;
-
-                // Obtén la información de ubicación basada en la IP
-                const respuestaUbicacion = await fetch(`https://ipinfo.io/${ip}/geo?token=tu_token_de_ipinfo`);
-                const datosUbicacion = await respuestaUbicacion.json();
-
-                // Muestra la información en una ventana emergente
-                alert(`IP: ${ip}\nCiudad: ${datosUbicacion.city}\nRegión: ${datosUbicacion.region}\nPaís: ${datosUbicacion.country}`);
-            } catch (error) {
-                alert('No se pudo obtener la ubicación: ' + error);
-            }
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe4e1;
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
         }
-    </script>
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            color: #ff69b4;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        #imagen-container {
+            margin-top: 20px;
+        }
+        #imagen-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        #imagen-container p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #ff69b4;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Hola Mundo</h1>
     <button onclick="obtenerUbicacion()">Obtener Ubicación Geográfica</button>
+    <div id="imagen-container"></div>
 </body>
 </html>
