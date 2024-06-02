@@ -37,24 +37,31 @@
         }
         #imagen-container {
             margin-top: 20px;
+            position: relative;
+            width: 60%;
         }
         #imagen-container img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             border-radius: 15px;
+            position: relative;
+            z-index: 1;
         }
+
         #imagen-container p {
             font-family: 'Dancing Script', cursive;
             font-size: 2em;
             color: #ff69b4;
             margin-top: 10px;
+            position: relative;
+            z-index: 3;
         }
     </style>
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
-    <button onclick="obtenerUbicacion()">Obtener Ubicación Geográfica</button>
+    <h1>Hola mi Mundo</h1>
+    <button onclick="obtenerUbicacion()">Haz click para tu sorpresa</button>
     <div id="imagen-container"></div>
 </body>
 </html>
