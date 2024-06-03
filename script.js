@@ -11,7 +11,7 @@ async function irAPagina() {
 
 async function mostrarMapaConDistancia() {
     // Coordenadas del punto fijo (por ejemplo, Times Square, NY)
-    const puntoFijo = [ 19.508378912294813, -99.0372744770284];
+    const puntoFijo = [ 19.508, -99.037];
 
     // Obtener la ubicación actual del usuario
     const posicion = await new Promise((resolve, reject) => {
