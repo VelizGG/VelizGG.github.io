@@ -49,6 +49,6 @@ async function mostrarMapaConDistancia() {
     // Mostrar la distancia en un popup
     L.popup()
         .setLatLng(puntoUsuario)
-        .setContent('Distancia al Punto Fijo: ' + distancia.toFixed(2) + ' km')
+        .setContent('Distancia a mi amor: ' + distancia.toFixed(2) + ' km')
         .openOn(map);
 }
