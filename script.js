@@ -7,3 +7,6 @@ async function obtenerUbicacion() {
         alert('No se pudo obtener la ubicación: ' + error.message);
     }
 }
+function irAPagina() {
+    window.location.href = 'pages/mapa_y.html';
+}
