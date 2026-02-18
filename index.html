@@ -1,69 +1,389 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hola Mundo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Véliz | Data Analyst Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #ffe4e1;
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        * {
             margin: 0;
-            text-align: center;
-        }
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3em;
-            color: #ff69b4;
-            margin-bottom: 20px;
-        }
-        button {
-            background-color: #ff69b4;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-            margin-bottom: 20px;
-        }
-        button:hover {
-            background-color: #4c1fc7;
-        }
-        #imagen-container {
-            margin-top: 20px;
-            position: relative;
-            width: 60%;
-        }
-        #imagen-container img {
-            width: auto;
-            height: auto;
-            border-radius: 15px;
-            position: relative;
-            z-index: 1;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        #imagen-container p {
-            font-family: 'Dancing Script', cursive;
+        body {
+            background-color: #000000;
+            color: #00FFFF;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #000000 0%, #001a1a 100%);
+            border-bottom: 2px solid #00FFFF;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            color: #00FFFF;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #00FFFF;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #00FFFF;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            background-color: #00FFFF;
+            color: #000000;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+
+        .social-links a:hover {
+            background-color: #FFFFFF;
+            box-shadow: 0 0 20px #00FFFF;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #003333;
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 2em;
-            color: #ff69b4;
+            color: #00FFFF;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #001a1a 0%, #003333 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #00FFFF;
+        }
+
+        .skill-category h3 {
+            color: #00FFFF;
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #FFFFFF;
+            border-bottom: 1px solid #002626;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #001a1a 0%, #003333 100%);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #00FFFF;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .project-card h3 {
+            color: #00FFFF;
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .project-card p {
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
             margin-top: 10px;
-            position: relative;
-            z-index: 3;
+        }
+
+        .status-online {
+            background-color: #00FF00;
+            color: #000000;
+        }
+
+        .status-beta {
+            background-color: #FFAA00;
+            color: #000000;
+        }
+
+        .status-deployed {
+            background-color: #00FFFF;
+            color: #000000;
+        }
+
+        .project-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            background-color: transparent;
+            color: #00FFFF;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #00FFFF;
+            border-radius: 3px;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: #00FFFF;
+            color: #000000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #00FFFF;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                letter-spacing: 3px;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Hola mi Mundo</h1>
-    <button onclick="obtenerUbicacion()">Haz click para tu sorpresa</button>
-    <button onclick="irAPagina()">Ver mapa</button>
-    <div id="imagen-container"></div>
+    <header>
+        <div class="container">
+            <h1>Gabriel Véliz</h1>
+            <p class="tagline">Data Analyst</p>
+            <p class="subtitle">Transform raw data into actionable insights</p>
+            <p style="color: #FFFFFF; max-width: 800px; margin: 20px auto;">
+                Specializing in marketing analytics, data governance, and interactive dashboards. 
+                My mission is to transform data into actionable insights and build machine learning solutions for financial prediction.
+            </p>
+            <div class="social-links">
+                <a href="https://velizgg-portafolio.vercel.app/" target="_blank">Portfolio</a>
+                <a href="https://www.linkedin.com/in/gabriel-véliz-gutierrez-b976bb1b6" target="_blank">LinkedIn</a>
+                <a href="mailto:velizgg.contact@gmail.com">Email</a>
+                <a href="https://github.com/VelizGG" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>⚡ About Me</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #FFFFFF; font-size: 1.1em;">
+                I operate as a Data Analyst with experience executing marketing analytics processes, 
+                data governance, and development of interactive dashboards. My primary directive is to 
+                transform data into actionable insights and build machine learning solutions for financial prediction.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>🔧 System Capabilities</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <ul>
+                        <li>Google Cloud Platform</li>
+                        <li>AWS</li>
+                        <li>HubSpot</li>
+                        <li>Looker</li>
+                        <li>Metabase</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data & ML Libraries</h3>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>Plotly</li>
+                        <li>scikit-learn</li>
+                        <li>XGBoost</li>
+                        <li>TensorFlow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>📋 Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Financial Dashboard v1.0</h3>
+                    <p><strong>System:</strong> Interactive dashboard built on Jupyter framework</p>
+                    <p><strong>Components:</strong> Polygon.io + Plotly + Bokeh + IPyWidgets</p>
+                    <p><strong>Function:</strong> Real-time market data visualization</p>
+                    <span class="project-status status-online">ONLINE</span>
+                    <div class="project-links">
+                        <a href="https://github.com/VelizGG/financial-dashboard" target="_blank">View Code</a>
+                        <a href="https://velizgg-portafolio.vercel.app/projects/financial-dashboard" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Market Prediction Engine v0.8</h3>
+                    <p><strong>System:</strong> Price prediction MVP</p>
+                    <p><strong>Algorithms:</strong> Random Forest + XGBoost + LightGBM</p>
+                    <p><strong>Data Sources:</strong> Technical indicators + Macroeconomic variables</p>
+                    <span class="project-status status-beta">BETA TESTING</span>
+                    <div class="project-links">
+                        <a href="https://github.com/VelizGG/market-prediction" target="_blank">View Code</a>
+                        <a href="https://velizgg-portafolio.vercel.app/projects/market-prediction" target="_blank">Documentation</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Data Governance Protocol: Morada Uno</h3>
+                    <p><strong>System:</strong> Data governance implementation</p>
+                    <p><strong>Components:</strong> HubSpot integration + Data Lakes design</p>
+                    <p><strong>Visual Interfaces:</strong> Looker + Metabase dashboards</p>
+                    <span class="project-status status-deployed">DEPLOYED</span>
+                    <div class="project-links">
+                        <a href="https://github.com/VelizGG/data-governance-morada" target="_blank">View Code</a>
+                        <a href="https://velizgg-portafolio.vercel.app/projects/morada-uno" target="_blank">Case Study</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>GCP Insight Folio v1.2</h3>
+                    <p><strong>System:</strong> GCP-based data analytics solution</p>
+                    <p><strong>Components:</strong> BigQuery + DataFlow + Cloud Functions</p>
+                    <p><strong>Function:</strong> Automated ETL pipelines with real-time analytics</p>
+                    <span class="project-status status-online">ONLINE</span>
+                    <div class="project-links">
+                        <a href="https://github.com/VelizGG/data-gcp-insight-folio" target="_blank">View Code</a>
+                        <a href="https://velizgg-portafolio.vercel.app/projects/gcp-insight" target="_blank">Architecture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>📡 Communication Channels</h2>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #FFFFFF; font-size: 1.1em; margin-bottom: 20px;">
+                    <strong>Location:</strong> Mexico City, Mexico
+                </p>
+                <p style="color: #FFFFFF; font-size: 1.1em; margin-bottom: 30px;">
+                    <strong>Status:</strong> <span style="color: #00FF00;">ACTIVE</span>
+                </p>
+                <div class="social-links">
+                    <a href="mailto:velizgg.contact@gmail.com">Contact Me</a>
+                    <a href="https://www.linkedin.com/in/gabriel-véliz-gutierrez-b976bb1b6" target="_blank">Connect on LinkedIn</a>
+                    <a href="https://velizgg-portafolio.vercel.app/" target="_blank">View Full Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>END OF LINE</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2024 Gabriel Véliz. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
