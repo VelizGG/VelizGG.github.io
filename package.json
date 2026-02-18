@@ -1,16 +1,13 @@
 {
-  "dependencies": {
-    "@turf/turf": "^6.5.0"
-  },
   "name": "velizgg.github.io",
-  "description": "",
-  "version": "1.0.0",
-  "main": "script.js",
+  "description": "Professional Portfolio Website for Gabriel Véliz - Data Analyst",
+  "version": "2.0.0",
+  "main": "index.html",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests specified\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["portfolio", "data-analyst", "data-science", "web"],
+  "author": "Gabriel Véliz",
+  "license": "MIT"
 }
